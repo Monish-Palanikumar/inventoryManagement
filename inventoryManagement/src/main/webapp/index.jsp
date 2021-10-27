@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Inventory Management</title>
+<title>Inventory Management System</title>
 <link rel="stylesheet" href="styles/index.css"></link>
 </head>
 <body>
