@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+
+h1 {
+	color: #111;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	line-height: 1;
+	text-align: center;
+}
+
+li {
+	font-family:"Bookman Old Style";
+	font-size: 30px;
+}
+
+a {
+	color: black;
+}
+
+ul {
+	display: table;
+	margin: 0 auto;
+}
