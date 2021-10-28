@@ -22,7 +22,7 @@ public class ProductDaoImpl implements ProductDao {
 	public Boolean add(Product product) {
 		try {
 			stmt = dbConfig.getCon().prepareStatement(
-					"INSERT INTO Product (productId, productName, productPrice, productAvailability) VALUES (?,?,?,?);");
+					"INSERT INTO product (productId, productName, productPrice, productAvailability) VALUES (?,?,?,?);");
 			stmt.setLong(1, product.getProductId());
 			stmt.setString(2, product.getProductName());
 			stmt.setInt(3, product.getProductPrice());
@@ -39,7 +39,7 @@ public class ProductDaoImpl implements ProductDao {
 	public Boolean update(Product product) {
 		try {
 			stmt = dbConfig.getCon().prepareStatement(
-					"UPDATE Product SET productName=?, productPrice=?, productAvailability=? WHERE productId=?;");
+					"UPDATE product SET productName=?, productPrice=?, productAvailability=? WHERE productId=?;");
 			stmt.setString(1, product.getProductName());
 			stmt.setInt(2, product.getProductPrice());
 			stmt.setInt(3, product.getProductAvailability());
@@ -55,7 +55,7 @@ public class ProductDaoImpl implements ProductDao {
 	@Override
 	public Boolean delete(Long productId) {
 		try {
-			stmt = dbConfig.getCon().prepareStatement("DELETE FROM Product WHERE productId=?;");
+			stmt = dbConfig.getCon().prepareStatement("DELETE FROM product WHERE productId=?;");
 			stmt.setLong(1, productId);
 			int n = stmt.executeUpdate();
 			return true;
@@ -70,7 +70,7 @@ public class ProductDaoImpl implements ProductDao {
 		ResultSet rs = null;
 		Product product = null;
 		try {
-			stmt = dbConfig.getCon().prepareStatement("SELECT * FROM Product WHERE productId=?;");
+			stmt = dbConfig.getCon().prepareStatement("SELECT * FROM product WHERE productId=?;");
 			stmt.setLong(1, productId);
 			rs = stmt.executeQuery();
 			if (rs.next()) {
@@ -94,7 +94,7 @@ public class ProductDaoImpl implements ProductDao {
 		ResultSet rs = null;
 		Product product = null;
 		try {
-			stmt = dbConfig.getCon().prepareStatement("SELECT * FROM Product;");
+			stmt = dbConfig.getCon().prepareStatement("SELECT * FROM product;");
 			rs = stmt.executeQuery();
 			if (rs.next()) {
 				product = new Product();
