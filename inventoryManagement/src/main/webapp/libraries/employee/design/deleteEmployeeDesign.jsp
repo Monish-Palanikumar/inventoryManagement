@@ -4,9 +4,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Delete Employee</title>
 </head>
 <body>
-
+	<h1>Delete Employee</h1>
+	
+	<form action="../implementation/deleteEmployeeImpl.jsp">
+	<input type="text" id="employeeId" />
+	<input type="button" id="delete" value="Delete" />
+	
+	</form>
+	
 </body>
 </html>

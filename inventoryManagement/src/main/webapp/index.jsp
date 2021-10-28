@@ -11,7 +11,7 @@
 	<h1>Inventory Management System</h1>
 	<div class="list">
 		<ul>
-			<li>Customer Sample
+			<li>Customer
 				<ul>
 					<li><a href="./libraries/customer/design/addCustomerDesign.jsp">Add Customer</a></li>
 					<li><a href="./libraries/customer/design/modifyCustomerDesign.jsp">Modify Customer</a></li>

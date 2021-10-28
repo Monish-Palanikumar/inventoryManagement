@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title> Show Employee</title>
 </head>
 <body>
-
+	<h1> Display Employee Details</h1>
 </body>
 </html>
