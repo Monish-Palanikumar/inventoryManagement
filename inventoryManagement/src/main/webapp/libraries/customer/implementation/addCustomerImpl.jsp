@@ -1,13 +1,22 @@
-<%@ page language="java" import="inventoryManagement.dto.Customer" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java"
+	import="inventoryManagement.dto.Customer,inventoryManagement.daoImpl.CustomerDaoImpl"
+	contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Adding Customer</title>
 </head>
 <body>
 	<jsp:useBean id="customer" class="inventoryManagement.dto.Customer"></jsp:useBean>
-	<h1>hellooosss</h1>
+	<jsp:setProperty property="*" name="customer" />
+	<%
+	CustomerDaoImpl customerDao = new CustomerDaoImpl();
+	Boolean b = customerDao.add(customer);
+	if (b)
+		response.sendRedirect("../../success.jsp");
+	else
+		response.sendRedirect("../../error.jsp");
+	%>
 </body>
 </html>

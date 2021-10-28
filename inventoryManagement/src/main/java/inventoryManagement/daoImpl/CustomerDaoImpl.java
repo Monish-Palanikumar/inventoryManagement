@@ -24,7 +24,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	public Boolean add(Customer customer) {
 		try {
 			stmt = dbConfig.getCon().prepareStatement(
-					"INSERT INTO Customer (customerId, customerName, customerPhone, customerAge) VALUES (?,?,?,?);");
+					"INSERT INTO customer (customerId, customerName, customerPhone, customerAge) VALUES (?,?,?,?);");
 			stmt.setLong(1, customer.getCustomerId());
 			stmt.setString(2, customer.getCustomerName());
 			stmt.setString(3, customer.getCustomerPhone());
@@ -41,7 +41,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	public Boolean update(Customer customer) {
 		try {
 			stmt = dbConfig.getCon().prepareStatement(
-					"UPDATE Customer SET customerName=?, customerPhone=?, customerAge=? WHERE customerId=?;");
+					"UPDATE customer SET customerName=?, customerPhone=?, customerAge=? WHERE customerId=?;");
 			stmt.setString(1, customer.getCustomerName());
 			stmt.setString(2, customer.getCustomerPhone());
 			stmt.setInt(3, customer.getCustomerAge());
@@ -57,7 +57,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	@Override
 	public Boolean delete(Long customerId) {
 		try {
-			stmt = dbConfig.getCon().prepareStatement("DELETE FROM Customer WHERE customerId=?;");
+			stmt = dbConfig.getCon().prepareStatement("DELETE FROM customer WHERE customerId=?;");
 			stmt.setLong(1, customerId);
 			int n = stmt.executeUpdate();
 			return true;
@@ -72,7 +72,7 @@ public class CustomerDaoImpl implements CustomerDao {
 		ResultSet rs = null;
 		Customer customer = null;
 		try {
-			stmt = dbConfig.getCon().prepareStatement("SELECT * FROM Customer WHERE customerId=?;");
+			stmt = dbConfig.getCon().prepareStatement("SELECT * FROM customer WHERE customerId=?;");
 			stmt.setLong(1, customerId);
 			rs = stmt.executeQuery();
 			if (rs.next()) {
@@ -96,7 +96,7 @@ public class CustomerDaoImpl implements CustomerDao {
 		Customer customer = null;
 		List<Customer> list = new ArrayList<Customer>();
 		try {
-			stmt = dbConfig.getCon().prepareStatement("SELECT * FROM Customer;");
+			stmt = dbConfig.getCon().prepareStatement("SELECT * FROM customer;");
 			rs = stmt.executeQuery();
 			while (rs.next()) {
 				customer = new Customer();

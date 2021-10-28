@@ -16,7 +16,7 @@ public class DbConfig {
 			e.printStackTrace();
 		}
 		try {
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb", "root", "");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/inventorystore", "root", "");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
