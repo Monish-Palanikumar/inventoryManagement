@@ -21,11 +21,11 @@
 				<td><input type="text" name="employeeName" /></td>
 			</tr>
 			<tr>
-				<td>Salary:</td>
+				<td>New Salary:</td>
 				<td><input type="text" name="salary" /></td>
 			</tr>
 			<tr>
-				<td>Job Title:</td>
+				<td>New Job Title:</td>
 				<td><input type="text" name="jobTitle" /></td>
 			</tr>
 			<tr style="text-align:center">
