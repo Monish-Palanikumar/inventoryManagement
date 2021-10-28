@@ -24,7 +24,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	public Boolean add(Employee employee) {
 		try {
 			stmt = dbConfig.getCon().prepareStatement(
-					"INSERT INTO Employee (employeeId, employeeName, salary, jobTitle) VALUES (?,?,?,?);");
+					"INSERT INTO employee (employeeId, employeeName, salary, jobTitle) VALUES (?,?,?,?);");
 			stmt.setLong(1, employee.getEmployeeId());
 			stmt.setString(2, employee.getEmployeeName());
 			stmt.setInt(3, employee.getSalary());
@@ -41,7 +41,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	public Boolean update(Employee employee) {
 		try {
 			stmt = dbConfig.getCon()
-					.prepareStatement("UPDATE Employee SET employeeName=?, salary=?, jobTitle=? WHERE employeeId=?;");
+					.prepareStatement("UPDATE employee SET employeeName=?, salary=?, jobTitle=? WHERE employeeId=?;");
 			stmt.setString(1, employee.getEmployeeName());
 			stmt.setInt(2, employee.getSalary());
 			stmt.setString(3, employee.getJobTitle());
@@ -57,7 +57,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	@Override
 	public Boolean delete(Long employeeId) {
 		try {
-			stmt = dbConfig.getCon().prepareStatement("DELETE FROM Employee WHERE employeeId=?;");
+			stmt = dbConfig.getCon().prepareStatement("DELETE FROM employee WHERE employeeId=?;");
 			stmt.setLong(1, employeeId);
 			int n = stmt.executeUpdate();
 			return true;
@@ -72,7 +72,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		ResultSet rs = null;
 		Employee employee = null;
 		try {
-			stmt = dbConfig.getCon().prepareStatement("SELECT * FROM Employee WHERE employeeId=?;");
+			stmt = dbConfig.getCon().prepareStatement("SELECT * FROM employee WHERE employeeId=?;");
 			stmt.setLong(1, employeeId);
 			rs = stmt.executeQuery();
 			if (rs.next()) {
@@ -96,7 +96,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		ResultSet rs = null;
 		Employee employee = null;
 		try {
-			stmt = dbConfig.getCon().prepareStatement("SELECT * FROM Employee;");
+			stmt = dbConfig.getCon().prepareStatement("SELECT * FROM employee;");
 			rs = stmt.executeQuery();
 			while (rs.next()) {
 				employee = new Employee();
