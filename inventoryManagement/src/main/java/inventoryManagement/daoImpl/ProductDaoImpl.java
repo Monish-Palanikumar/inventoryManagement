@@ -96,7 +96,7 @@ public class ProductDaoImpl implements ProductDao {
 		try {
 			stmt = dbConfig.getCon().prepareStatement("SELECT * FROM product;");
 			rs = stmt.executeQuery();
-			if (rs.next()) {
+			while (rs.next()) {
 				product = new Product();
 				product.setProductId(rs.getLong("productID"));
 				product.setProductName(rs.getString("productName"));
