@@ -10,7 +10,7 @@
 <body>
 	<h1> Modify Employee</h1>
 	
-	<form action="../implementation/modifyProducImpl.jsp">
+	<form action="../implementation/modifyProductImpl.jsp">
 		<table>
 			<tr>
 				<td> Product ID:</td>
@@ -21,8 +21,8 @@
 				<td><input type="text" name="productName" /></td>
 			</tr>
 			<tr>
-				<td>New Product Prize:</td>
-				<td><input type="text" name="productPrize" /></td>
+				<td>New Product Price:</td>
+				<td><input type="text" name="productPrice" /></td>
 			</tr>
 			<tr>
 				<td>New Product Availability:</td>
