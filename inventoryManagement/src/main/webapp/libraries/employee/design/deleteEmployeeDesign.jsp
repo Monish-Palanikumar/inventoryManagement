@@ -14,7 +14,7 @@
 	<table>
 		<tr>
 			<td>Employee ID:</td>
-			<td><input type="text" name="customerId" /></td>
+			<td><input type="text" name="employeeId" /></td>
 		</tr>
 		<tr style="text-align:center">
 			<td colspan="2"><input type="submit" value="Delete" /></td>
