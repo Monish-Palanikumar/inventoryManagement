@@ -1,0 +1,35 @@
+@charset "ISO-8859-1";
+
+h1 {
+	color: #111;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	line-height: 1;
+	text-align: center;
+}
+
+input {
+	font-size: 16px;
+	font-size: max(16px, 1em);
+	font-family: inherit;
+	padding: 0.25em 0.5em;
+	background-color: #fff;
+	border: 2px solid var(- -input-border);
+	border-radius: 4px;
+	margin: 5px;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 10px;
+	padding-top: 50px;
+}
+
+th, td {
+	padding: 5px;
+	font-weight: bold;
+	font-size: 25px;
+}
